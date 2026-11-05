@@ -1,693 +1,1002 @@
+<!-- 檔名：index.html -->
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 1. Google Search Console 驗證標記 -->
-  <!-- 依資料表指示預留此標記，發布前請將 content 替換為你在 GSC 複製的一串英數字 -->
-  <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_REPLACE_ME" />
+    <!-- Google Search Console 驗證標記 -->
+    <meta name="google-site-verification" content="（你自己的一串英數字）" />
 
-  <!-- 2. 基本 SEO 資訊 -->
-  <title>方柏元 | AI應用講師x STEM教育推動者</title>
-  <meta name="description" content="方柏元個人網站 - AI應用講師與STEM教育推動者，在宜蘭推動 STEM 教育，並於大專院校教授 iPAS AI 證照課程。">
-  <meta name="keywords" content="方柏元, 宜蘭 AI 講師, iPAS AI 應用規劃師課程, 人工智慧, 問題解決, AI Workflow, STEM教育">
-  <meta name="author" content="方柏元">
-  <meta name="robots" content="index, follow">
+    <!-- SEO 標題與描述 -->
+    <title>林予安｜插畫師・油畫創作者</title>
+    <meta name="description" content="林予安 Yu-An Lin 個人作品集 - 美術系應屆畢業的插畫師與油畫創作者，擅長手繪插畫、繪本與商業插畫，歡迎插畫邀稿與合作。">
+    <meta name="keywords" content="林予安, 新北插畫師, 手繪插畫邀稿, 美術系作品集, 繪本插畫">
+    
+    <!-- Canonical URL & Open Graph -->
+    <link rel="canonical" href="https://yuanlin-art.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="林予安｜插畫師・油畫創作者">
+    <meta property="og:description" content="林予安 Yu-An Lin 個人作品集 - 美術系應屆畢業的插畫師與油畫創作者，擅長手繪插畫、繪本與商業插畫。">
+    <meta property="og:image" content="https://yuanlin-art.github.io/share.jpg">
+    <meta property="og:url" content="https://yuanlin-art.github.io/">
+    
+    <!-- Favicon (Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
 
-  <!-- 3. Open Graph 社群分享標籤 -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="方柏元 | AI應用講師x STEM教育推動者">
-  <meta property="og:description" content="方柏元個人網站 - AI應用講師與STEM教育推動者，在宜蘭推動 STEM 教育，並於大專院校教授 iPAS AI 證照課程。">
-  <meta property="og:image" content="https://img.youtube.com/vi/nahd44GnJng/hqdefault.jpg">
-  <meta property="og:locale" content="zh_TW">
-
-  <!-- 4. Favicon (Emoji 圖示) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-
-  <!-- 5. Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#0B132B',
-              dark: '#1C2541',
-              blue: '#1E3A8A',
-              light: '#3A506B',
-              accent: '#38BDF8',
-              cyan: '#00F0FF',
-              surface: '#F8FAFC',
-              card: '#FFFFFF'
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FBF9F5',
+                        'cream-paper': '#F4EFE6',
+                        darkgreen: '#1C3A27',
+                        'darkgreen-light': '#2A5238',
+                        ochre: '#C86D4B',
+                        'ochre-hover': '#B05937',
+                        sand: '#E6DFC8'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Noto Serif TC', 'serif'],
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
             }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
-          }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <!-- 6. JSON-LD 結構化資料 (Person) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "方柏元",
-    "jobTitle": "AI應用講師",
-    "description": "資訊工程 x 管理科學背景，在宜蘭縣內推動STEM教育，並於大專院校教AI證照課程。",
-    "email": "mailto:fang0979580521@gmail.com",
-    "knowsAbout": ["生成式AI", "大數據分析", "課程教案設計", "AI Workflow", "STEM教育"]
-  }
-  </script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "林予安",
+      "alternateName": "Yu-An Lin",
+      "jobTitle": "插畫師・油畫創作者",
+      "url": "https://yuanlin-art.github.io/",
+      "sameAs": [
+        "https://www.instagram.com/yuanlin.art.demo/"
+      ],
+      "description": "剛從美術系畢業、正在找插畫與視覺設計工作的新鮮人，擅長手繪插畫、油畫創作與視覺敘事。"
+    }
+    </script>
 
-  <style>
-    /* 捲動平滑與隱藏預設捲軸微調 */
-    html {
-      scroll-behavior: smooth;
-    }
-    /* 捲動淡入效果 */
-    .fade-in-section {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-      will-change: opacity, transform;
-    }
-    .fade-in-section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* 自訂高質感幾何網格紋理背景 */
-    .bg-tech-pattern {
-      background-color: #0B132B;
-      background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
-                        radial-gradient(rgba(30, 58, 138, 0.15) 1px, #0B132B 1px);
-      background-size: 40px 40px;
-      background-position: 0 0, 20px 20px;
-    }
-  </style>
+    <style>
+        /* 紙張質感背景與動畫效果 */
+        body {
+            background-color: #FBF9F5;
+            background-image: radial-gradient(#E6DFC8 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+            color: #1C3A27;
+            scroll-behavior: smooth;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* 模態視窗樣式 */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 技能條動畫 */
+        .skill-bar-fill {
+            transition: width 1.2s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-brand-surface text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-brand-navy">
+<body class="font-sans antialiased selection:bg-ochre selection:text-white">
 
-  <!-- 頂部導覽列 (Header) -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-navy/90 backdrop-blur-md border-b border-brand-light/30 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- 標誌 / 幾何文字頭像 -->
-      <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-accent rounded-lg p-1">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-accent to-blue-600 flex items-center justify-center text-brand-navy font-black text-xl shadow-lg shadow-brand-accent/20 group-hover:scale-105 transition-transform duration-200">
-          方
+    <!-- 頂端閱讀進度條 -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-ochre z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- 導覽列 -->
+    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-sand/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl font-bold tracking-wide text-darkgreen flex items-center gap-2">
+                <span class="text-2xl">🎨</span> 林予安 <span class="text-xs text-ochre font-normal tracking-normal">Yu-An Lin</span>
+            </a>
+            
+            <!-- 電腦版選單 -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-ochre transition-colors">關於我</a>
+                <a href="#portfolio" class="hover:text-ochre transition-colors">作品集</a>
+                <a href="#skills" class="hover:text-ochre transition-colors">專長技能</a>
+                <a href="#experience" class="hover:text-ochre transition-colors">經歷</a>
+                <a href="#awards" class="hover:text-ochre transition-colors">獲獎</a>
+                <a href="#testimonials" class="hover:text-ochre transition-colors">推薦</a>
+                <a href="#life" class="hover:text-ochre transition-colors">生活寫照</a>
+                <a href="#knowledge" class="hover:text-ochre transition-colors">知識小教室</a>
+                <a href="#contact" class="px-4 py-2 rounded-full bg-ochre text-white hover:bg-ochre-hover transition-colors shadow-sm">聯絡我</a>
+            </nav>
+
+            <!-- 手機版漢堡選單按鈕 -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-darkgreen hover:bg-sand/30 focus:outline-none" aria-label="切換選單">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path id="menu-icon-bars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path id="menu-icon-cross" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
-        <div>
-          <span class="text-white font-bold text-lg tracking-wide block leading-tight">方柏元</span>
-          <span class="text-xs text-brand-accent font-medium tracking-wider uppercase">AI 應用講師</span>
+
+        <!-- 手機版展開選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-paper border-b border-sand px-4 pt-2 pb-4 space-y-2 text-base font-medium">
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-sand/40">關於我</a>
+            <a href="#portfolio" class="block px-3 py-2 rounded-md hover:bg-sand/40">作品集</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-sand/40">專長技能</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-sand/40">經歷</a>
+            <a href="#awards" class="block px-3 py-2 rounded-md hover:bg-sand/40">證照與獎項</a>
+            <a href="#testimonials" class="block px-3 py-2 rounded-md hover:bg-sand/40">他人推薦</a>
+            <a href="#life" class="block px-3 py-2 rounded-md hover:bg-sand/40">興趣與生活</a>
+            <a href="#knowledge" class="block px-3 py-2 rounded-md hover:bg-sand/40">專業知識</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md bg-ochre text-white text-center">聯絡我</a>
         </div>
-      </a>
+    </header>
 
-      <!-- 電腦版選單 -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
-        <a href="#about" class="hover:text-brand-accent transition-colors py-2">關於我</a>
-        <a href="#metrics" class="hover:text-brand-accent transition-colors py-2">成果實績</a>
-        <a href="#portfolio" class="hover:text-brand-accent transition-colors py-2">作品案例</a>
-        <a href="#experience" class="hover:text-brand-accent transition-colors py-2">經歷歷程</a>
-        <a href="#knowledge" class="hover:text-brand-accent transition-colors py-2">AI 導入小教室</a>
-        <a href="#contact" class="px-4 py-2.5 rounded-lg bg-brand-accent text-brand-navy font-semibold hover:bg-white hover:shadow-md transition-all duration-200">
-          聯絡諮詢
-        </a>
-      </nav>
+    <main>
+        <!-- 開場 (Hero Section - 便當格版型) -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 fade-in-section">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                <!-- 大主語卡片 (佔 8 欄) -->
+                <div class="lg:col-span-8 bg-cream-paper/90 rounded-3xl p-8 md:p-12 border border-sand shadow-sm flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-ochre/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sand/60 text-xs font-semibold text-darkgreen mb-6">
+                            <span>🎨</span> 剛從美術系畢業・尋找正職與接案合作
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold tracking-tight text-darkgreen leading-tight mb-6">
+                            我用一筆一筆的手感線條，幫助品牌和故事，被人好好記住。
+                        </h1>
+                        <p class="text-base sm:text-lg text-darkgreen-light max-w-2xl leading-relaxed mb-8">
+                            主修油畫，也創作手繪插畫與繪本。喜歡將日常生活中溫暖的小事與質感筆觸，轉化為有溫度的視覺語言。
+                        </p>
+                    </div>
 
-      <!-- 手機版漢堡選單按鈕 -->
-      <button id="menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-brand-accent" aria-label="切換選單">
-        <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-        <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
+                    <div>
+                        <!-- 關鍵字標籤 -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-white/80 border border-sand rounded-lg text-xs font-medium">✨ 手繪插畫</span>
+                            <span class="px-3 py-1 bg-white/80 border border-sand rounded-lg text-xs font-medium">🖼️ 油畫創作</span>
+                            <span class="px-3 py-1 bg-white/80 border border-sand rounded-lg text-xs font-medium">📖 視覺敘事</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="#portfolio" class="px-6 py-3 rounded-full bg-darkgreen text-white hover:bg-darkgreen-light transition-all shadow-md font-medium">
+                                觀看我的作品
+                            </a>
+                            <a href="#contact" class="px-6 py-3 rounded-full bg-white border border-sand text-darkgreen hover:bg-sand/30 transition-all font-medium">
+                                來信邀稿合作
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 開場個人照片 (佔 4 欄) -->
+                <div class="lg:col-span-4 bg-darkgreen rounded-3xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-sm">
+                    <div class="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden mb-6">
+                        <img src="photo.jpg" 
+                             alt="林予安 Yu-An Lin 個人照片" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';"
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkgreen/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 bg-white/20 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full">新北市 / 可遠端</span>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-serif font-bold">林予安 <span class="text-sm font-sans font-normal opacity-80">Yu-An Lin</span></h2>
+                        <p class="text-xs text-sand mt-1">國立臺灣藝術大學 美術學系 畢業</p>
+                        <p class="text-sm text-cream-paper/90 mt-3 leading-relaxed">
+                            「同一個綠色可以調 20 分鐘才滿意。」注重色彩細節與觀察力的創作者。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 質感滿版橫幅圖片 -->
+        <div class="w-full h-32 md:h-48 overflow-hidden relative my-6">
+            <img src="hero.jpg" 
+                 alt="工作室畫案與創作質感" 
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1600&q=80';"
+                 class="w-full h-full object-cover object-center filter brightness-90">
+            <div class="absolute inset-0 bg-darkgreen/10"></div>
+        </div>
+
+        <!-- 關於我 (About Me) -->
+        <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 fade-in-section">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">關於我</h2>
+                <p class="text-sm text-ochre font-semibold tracking-wider uppercase">About Me</p>
+                <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-3/4 rounded-3xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="about.jpg" 
+                             alt="林予安創作寫景日常" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80';"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-cream-paper border border-sand p-4 rounded-2xl shadow-lg hidden sm:block max-w-xs">
+                        <p class="text-xs text-darkgreen font-medium italic">
+                            🐾 身邊有貓咪「炭筆」陪著創作，喜歡帶著畫本走入菜市場與老街寫生。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-darkgreen-light leading-relaxed">
+                    <div class="bg-white/60 p-6 rounded-2xl border border-sand/60 shadow-sm">
+                        <h3 class="text-xl font-serif font-bold text-darkgreen mb-2">從油畫創作到手繪視覺敘事</h3>
+                        <p>
+                            今年 6 月畢業於臺藝大美術系，目前一邊接小型商業插畫案，一邊積極尋找插畫師或視覺設計的正職工作。每天堅持繪畫 2 小時，持續累積創作靈感與能量。
+                        </p>
+                    </div>
+
+                    <div class="bg-white/60 p-6 rounded-2xl border border-sand/60 shadow-sm">
+                        <h3 class="text-lg font-serif font-bold text-darkgreen mb-2">讓藝術走入生活的轉折點</h3>
+                        <p>
+                            大二以前我聚焦於傳統油畫創作。直到大三幫系學會繪製迎新海報，第一次看到學弟妹拿著海報開心合照，才發覺讓畫作進入大眾視野、被使用與分享，也是一種美好的創作體驗。從那時起，我開始嘗試將油畫的豐富色彩與手感筆觸，注入插畫與繪本設計中。
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-sand/30 border border-sand/50">
+                            <h4 class="font-bold text-darkgreen text-sm mb-1">📌 做事原則</h4>
+                            <p class="text-xs">堅持**準時交稿**，並先聽懂需求再動筆。每個專案皆提供 2～3 張草圖溝通方向。</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-sand/30 border border-sand/50">
+                            <h4 class="font-bold text-darkgreen text-sm mb-1">🌿 趣聞小驚喜</h4>
+                            <p class="text-xs">同學都叫我「綠色研究員」，因為我對色彩極其嚴謹，常為了調出滿意的綠色反覆嘗試 20 分鐘以上。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品集 (Portfolio) -->
+        <section id="portfolio" class="bg-cream-paper/60 py-16 md:py-24 border-y border-sand/60 fade-in-section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">作品集</h2>
+                    <p class="text-sm text-ochre font-semibold tracking-wider uppercase">Selected Works</p>
+                    <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+                </div>
+
+                <!-- 分類篩選按鈕 -->
+                <div class="flex flex-wrap justify-center gap-2 mb-10" id="portfolio-filters">
+                    <button data-filter="all" class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-darkgreen text-white transition-all shadow-sm">全部作品</button>
+                    <button data-filter="oil" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-darkgreen hover:bg-sand/40 border border-sand transition-all">油畫創作</button>
+                    <button data-filter="picturebook" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-darkgreen hover:bg-sand/40 border border-sand transition-all">繪本插畫</button>
+                    <button data-filter="commercial" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-darkgreen hover:bg-sand/40 border border-sand transition-all">商業插畫</button>
+                    <button data-filter="graphic" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-darkgreen hover:bg-sand/40 border border-sand transition-all">平面設計</button>
+                </div>
+
+                <!-- 作品列表 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+                    
+                    <!-- 作品 1 -->
+                    <div class="portfolio-item bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm hover:shadow-md transition-all duration-300 group" data-category="oil">
+                        <div class="h-64 overflow-hidden relative cursor-pointer" onclick="openModal(1)">
+                            <img src="work1.jpg" 
+                                 alt="慢慢走的城市 油畫創作" 
+                                 loading="lazy"
+                                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80';"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-darkgreen/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">油畫創作</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mb-2 cursor-pointer hover:text-ochre transition-colors" onclick="openModal(1)">慢慢走的城市</h3>
+                            <p class="text-sm text-darkgreen-light mb-4 line-clamp-2">用 6 幅油畫，畫下台北街頭「慢下來」的片刻。捕捉等公車的阿伯、巷口曬太陽的貓與早餐店的蒸氣。</p>
+                            <div class="flex items-center justify-between text-xs text-gray-500 border-t border-sand/40 pt-4">
+                                <span class="bg-cream px-2.5 py-1 rounded border border-sand/50">🏆 畢業展主展區入選</span>
+                                <button onclick="openModal(1)" class="font-medium text-ochre hover:underline flex items-center gap-1">查看細節 ➔</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 作品 2 -->
+                    <div class="portfolio-item bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm hover:shadow-md transition-all duration-300 group" data-category="picturebook">
+                        <div class="h-64 overflow-hidden relative cursor-pointer" onclick="openModal(2)">
+                            <img src="work2.jpg" 
+                                 alt="阿嬤的雜貨店 繪本插畫" 
+                                 loading="lazy"
+                                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80';"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-darkgreen/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">繪本插畫</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mb-2 cursor-pointer hover:text-ochre transition-colors" onclick="openModal(2)">阿嬤的雜貨店</h3>
+                            <p class="text-sm text-darkgreen-light mb-4 line-clamp-2">一本 16 頁的手繪繪本，寫的是外婆在鄉下開的雜貨店，把童年最溫暖的記憶珍藏留下。</p>
+                            <div class="flex items-center justify-between text-xs text-gray-500 border-t border-sand/40 pt-4">
+                                <span class="bg-cream px-2.5 py-1 rounded border border-sand/50">🌟 評圖最高分 / 印製 30 本</span>
+                                <button onclick="openModal(2)" class="font-medium text-ochre hover:underline flex items-center gap-1">查看細節 ➔</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 作品 3 -->
+                    <div class="portfolio-item bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm hover:shadow-md transition-all duration-300 group" data-category="commercial">
+                        <div class="h-64 overflow-hidden relative cursor-pointer" onclick="openModal(3)">
+                            <img src="work3.jpg" 
+                                 alt="小日子咖啡 菜單插畫" 
+                                 loading="lazy"
+                                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80';"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-darkgreen/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">商業插畫</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mb-2 cursor-pointer hover:text-ochre transition-colors" onclick="openModal(3)">小日子咖啡 菜單插畫</h3>
+                            <p class="text-sm text-darkgreen-light mb-4 line-clamp-2">幫社區咖啡店繪製手感菜單與 IG 飲品視覺，完成 12 款飲品與甜點插畫。</p>
+                            <div class="flex items-center justify-between text-xs text-gray-500 border-t border-sand/40 pt-4">
+                                <span class="bg-cream px-2.5 py-1 rounded border border-sand/50">☕ 甜點點單率提升</span>
+                                <button onclick="openModal(3)" class="font-medium text-ochre hover:underline flex items-center gap-1">查看細節 ➔</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 作品 4 -->
+                    <div class="portfolio-item bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm hover:shadow-md transition-all duration-300 group" data-category="graphic">
+                        <div class="h-64 overflow-hidden relative cursor-pointer" onclick="openModal(4)">
+                            <img src="work4.jpg" 
+                                 alt="2025 系展主視覺" 
+                                 loading="lazy"
+                                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-darkgreen/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">平面設計</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mb-2 cursor-pointer hover:text-ochre transition-colors" onclick="openModal(4)">2025 系展主視覺</h3>
+                            <p class="text-sm text-darkgreen-light mb-4 line-clamp-2">美術系年度系展主視覺海報、邀請卡與展場指標設計，整合延伸 5 種周邊尺寸。</p>
+                            <div class="flex items-center justify-between text-xs text-gray-500 border-t border-sand/40 pt-4">
+                                <span class="bg-cream px-2.5 py-1 rounded border border-sand/50">🎨 印刷海報 200 張</span>
+                                <button onclick="openModal(4)" class="font-medium text-ochre hover:underline flex items-center gap-1">查看細節 ➔</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 專長技能 (Skills) -->
+        <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 fade-in-section">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">專長技能</h2>
+                <p class="text-sm text-ochre font-semibold tracking-wider uppercase">Skills & Expertise</p>
+                <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 技能 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">🎨 油畫創作 <span class="text-xs bg-ochre/10 text-ochre px-2 py-0.5 rounded font-normal">專精</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Four Years Major</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-darkgreen h-2.5 rounded-full skill-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">四年主修經驗，畢業創作成果為 6 幅 F50 的系列油畫作品。</p>
+                </div>
+
+                <!-- 技能 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">📱 Procreate 數位插畫 <span class="text-xs bg-darkgreen/10 text-darkgreen px-2 py-0.5 rounded font-normal">熟練</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Digital Art</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-ochre h-2.5 rounded-full skill-bar-fill" style="width: 88%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">繪本《阿嬤的雜貨店》全書 16 頁皆使用 Procreate 手繪獨立繪製完成。</p>
+                </div>
+
+                <!-- 技能 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">🖼️ Adobe Photoshop <span class="text-xs bg-darkgreen/10 text-darkgreen px-2 py-0.5 rounded font-normal">熟練</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Photo & Color</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-darkgreen h-2.5 rounded-full skill-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">熟悉影像修圖、作品掃描調色與印刷前期色彩校正檔輸出。</p>
+                </div>
+
+                <!-- 技能 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">📐 Adobe Illustrator <span class="text-xs bg-darkgreen/10 text-darkgreen px-2 py-0.5 rounded font-normal">熟練</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Vector & Layout</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-ochre h-2.5 rounded-full skill-bar-fill" style="width: 80%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">負責系學會活動海報設計、排版印刷檔管理與 Logo 標籤製作。</p>
+                </div>
+
+                <!-- 技能 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">✏️ 水彩與鋼筆淡彩 <span class="text-xs bg-darkgreen/10 text-darkgreen px-2 py-0.5 rounded font-normal">熟練</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Sketchbook</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-darkgreen h-2.5 rounded-full skill-bar-fill" style="width: 90%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">隨身攜帶寫生小本子速寫，目前已累積超過 120 頁生活視覺寫照。</p>
+                </div>
+
+                <!-- 技能 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-sand/70 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-darkgreen flex items-center gap-2">✨ Canva <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-normal">入門</span></span>
+                        <span class="text-xs font-semibold text-darkgreen-light">Social Media</span>
+                    </div>
+                    <div class="w-full bg-sand/40 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div class="bg-gray-400 h-2.5 rounded-full skill-bar-fill" style="width: 60%;"></div>
+                    </div>
+                    <p class="text-xs text-gray-600">協助社區咖啡店建立高質感的 IG 貼文範本與社群版面佈局。</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 經歷 (Experience) -->
+        <section id="experience" class="bg-cream-paper/40 py-16 md:py-24 border-t border-sand/60 fade-in-section">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">經歷 Timeline</h2>
+                    <p class="text-sm text-ochre font-semibold tracking-wider uppercase">My Journey</p>
+                    <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+                </div>
+
+                <!-- 時間軸內容 -->
+                <div class="relative border-l-2 border-sand ml-4 md:ml-32 space-y-8">
+                    
+                    <!-- 經歷 1 -->
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ochre ring-4 ring-cream"></div>
+                        <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-ochre uppercase tracking-wider mb-1 md:mb-0">
+                            2026/07 – 現在
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sand/80 shadow-sm">
+                            <h3 class="text-lg font-bold text-darkgreen">自由接案插畫師</h3>
+                            <p class="text-xs text-ochre font-medium mb-2">商業插畫 / 個人接案</p>
+                            <p class="text-xs text-darkgreen-light leading-relaxed">
+                                接洽小型商業插畫案，包含咖啡店菜單插畫、獨立書店活動海報。完成 2 個案子且獲得業主好評續邀，建立良好的時程控管與合約流程。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 經歷 2 -->
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-darkgreen ring-4 ring-cream"></div>
+                        <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-darkgreen uppercase tracking-wider mb-1 md:mb-0">
+                            2022/09 – 2026/06
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sand/80 shadow-sm">
+                            <h3 class="text-lg font-bold text-darkgreen">國立臺灣藝術大學 美術學系</h3>
+                            <p class="text-xs text-darkgreen font-medium mb-2">學士學位（主修油畫）</p>
+                            <p class="text-xs text-darkgreen-light leading-relaxed">
+                                系統性修習油畫、版畫、素描、色彩學與藝術史。大四完成畢業創作《慢慢走的城市》並入選系上畢業展主展區。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 經歷 3 -->
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-darkgreen ring-4 ring-cream"></div>
+                        <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-darkgreen uppercase tracking-wider mb-1 md:mb-0">
+                            2024/09 – 2025/06
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sand/80 shadow-sm">
+                            <h3 class="text-lg font-bold text-darkgreen">美術系系學會 美宣組組長</h3>
+                            <p class="text-xs text-darkgreen font-medium mb-2">團隊領導 / 視覺設計</p>
+                            <p class="text-xs text-darkgreen-light leading-relaxed">
+                                帶領 4 位組員負責迎新、系展、聖誕晚會等活動主視覺。一年內完成 8 檔活動主視覺，積累印刷廠發包與進度控制實務。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 經歷 4 -->
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-darkgreen ring-4 ring-cream"></div>
+                        <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-darkgreen uppercase tracking-wider mb-1 md:mb-0">
+                            2025/07 – 2025/08
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sand/80 shadow-sm">
+                            <h3 class="text-lg font-bold text-darkgreen">兒童美術教室 暑期助教</h3>
+                            <p class="text-xs text-darkgreen font-medium mb-2">藝術教學與引導</p>
+                            <p class="text-xs text-darkgreen-light leading-relaxed">
+                                陪伴約 30 位 6～10 歲小朋友進行水彩與黏土課程，訓練將專業色彩概念轉化為親切易懂語言的能力。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 經歷 5 -->
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-darkgreen ring-4 ring-cream"></div>
+                        <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-darkgreen uppercase tracking-wider mb-1 md:mb-0">
+                            2023/07
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-sand/80 shadow-sm">
+                            <h3 class="text-lg font-bold text-darkgreen">偏鄉國小 暑期藝術營 志工</h3>
+                            <p class="text-xs text-darkgreen font-medium mb-2">壁畫創作團隊</p>
+                            <p class="text-xs text-darkgreen-light leading-relaxed">
+                                團隊合作規劃 3 天藝術營，帶領小學生共同設計並繪製了一面 3 公尺長的校園彩繪壁畫。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 證照與獎項 (Awards) -->
+        <section id="awards" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 fade-in-section">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">證照與獎項</h2>
+                <p class="text-sm text-ochre font-semibold tracking-wider uppercase">Honors & Recognition</p>
+                <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-sand/80 text-center shadow-sm hover:border-ochre transition-colors">
+                    <span class="text-3xl mb-3 block">🏆</span>
+                    <span class="text-xs text-ochre font-bold">2026 年</span>
+                    <h3 class="font-bold text-darkgreen mt-1">畢業創作主展區入選</h3>
+                    <p class="text-xs text-gray-500 mt-2">作品《慢慢走的城市》｜國立臺灣藝術大學 美術學系</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sand/80 text-center shadow-sm hover:border-ochre transition-colors">
+                    <span class="text-3xl mb-3 block">🥇</span>
+                    <span class="text-xs text-ochre font-bold">2025 年</span>
+                    <h3 class="font-bold text-darkgreen mt-1">系展 油畫類 佳作</h3>
+                    <p class="text-xs text-gray-500 mt-2">國立臺灣藝術大學 美術學系</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-sand/80 text-center shadow-sm hover:border-ochre transition-colors">
+                    <span class="text-3xl mb-3 block">🎨</span>
+                    <span class="text-xs text-ochre font-bold">2024 年</span>
+                    <h3 class="font-bold text-darkgreen mt-1">校園插畫徵件 入選</h3>
+                    <p class="text-xs text-gray-500 mt-2">國立臺灣藝術大學</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 他人推薦 (Testimonials) -->
+        <section id="testimonials" class="bg-darkgreen text-white py-16 md:py-24 fade-in-section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-serif font-bold mb-3">他人推薦</h2>
+                    <p class="text-sm text-ochre font-semibold tracking-wider uppercase">Testimonials</p>
+                    <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- 推薦 1 -->
+                    <div class="bg-darkgreen-light/80 p-8 rounded-3xl border border-white/10 relative">
+                        <span class="text-4xl text-ochre absolute top-4 right-6 font-serif">“</span>
+                        <p class="text-sm sm:text-base italic leading-relaxed text-cream-paper/90 mb-6">
+                            「予安是那種會為了一個顏色反覆嘗試的學生。她的畫不炫技，但很真誠，看得出她真的在觀察這個世界。」
+                        </p>
+                        <div class="flex items-center gap-3 border-t border-white/10 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-sand/30 flex items-center justify-center font-bold text-white">陳</div>
+                            <div>
+                                <h4 class="font-bold text-sm">陳老師</h4>
+                                <p class="text-xs text-sand">大學油畫課指導老師</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 推薦 2 -->
+                    <div class="bg-darkgreen-light/80 p-8 rounded-3xl border border-white/10 relative">
+                        <span class="text-4xl text-ochre absolute top-4 right-6 font-serif">“</span>
+                        <p class="text-sm sm:text-base italic leading-relaxed text-cream-paper/90 mb-6">
+                            「溝通很順，每次都先給草圖讓我挑，交稿也很準時。客人常問菜單是誰畫的。」
+                        </p>
+                        <div class="flex items-center gap-3 border-t border-white/10 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-ochre/40 flex items-center justify-center font-bold text-white">小</div>
+                            <div>
+                                <h4 class="font-bold text-sm">小日子咖啡 老闆</h4>
+                                <p class="text-xs text-sand">商業合作業主</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 興趣與生活 照片牆 (Life & Interests) -->
+        <section id="life" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 fade-in-section">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">興趣與生活</h2>
+                <p class="text-sm text-ochre font-semibold tracking-wider uppercase">Life & Inspiration</p>
+                <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- 生活 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="life1.jpg" 
+                             alt="街頭寫生寫景" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-darkgreen text-base mb-1">街頭寫生 🌿</h3>
+                        <p class="text-xs text-gray-600">帶著小本子去菜市場與老街，一畫就是一下午，記錄街邊溫度。</p>
+                    </div>
+                </div>
+
+                <!-- 生活 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="life2.jpg" 
+                             alt="手作烘焙餅乾" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-darkgreen text-base mb-1">手作烘焙 🍪</h3>
+                        <p class="text-xs text-gray-600">失敗的餅乾也會拍照記錄下來，當作畫畫創作的配色與紋理靈感。</p>
+                    </div>
+                </div>
+
+                <!-- 生活 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand/80 shadow-sm group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="life3.jpg" 
+                             alt="黑貓炭筆監工" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-darkgreen text-base mb-1">黑貓「炭筆」🐈‍⬛</h3>
+                        <p class="text-xs text-gray-600">我的專屬模特兒兼監工，經常在畫畫時靜靜躺在調色盤旁邊陪伴。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 專業知識區 (AEO Knowledge Hub) -->
+        <section id="knowledge" class="bg-cream-paper/70 py-16 md:py-24 border-t border-sand/60 fade-in-section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">予安的畫畫小教室</h2>
+                    <p class="text-sm text-ochre font-semibold tracking-wider">分享手繪插畫、油畫與插畫接案的實戰經驗</p>
+                    <div class="w-12 h-0.5 bg-ochre mx-auto mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- 文章卡片 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-sand shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-ochre bg-ochre/10 px-2.5 py-1 rounded-full">作品集指南</span>
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mt-3 mb-2">美術系畢業生的作品集要放哪些作品？</h3>
+                            <p class="text-sm text-darkgreen-light leading-relaxed mb-4">
+                                作品集重質不重量，挑 8～12 件最能代表你的作品，並為每件寫下創作動機與你負責的部分，讓人看懂你的思考。
+                            </p>
+                        </div>
+                        <a href="article-art-portfolio.html" class="inline-flex items-center gap-1 text-sm font-bold text-darkgreen hover:text-ochre transition-colors mt-2">
+                            閱讀全文 ➔
+                        </a>
+                    </div>
+
+                    <!-- 文章卡片 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-sand shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-ochre bg-ochre/10 px-2.5 py-1 rounded-full">接案實戰</span>
+                            <h3 class="text-xl font-serif font-bold text-darkgreen mt-3 mb-2">插畫接案怎麼報價？</h3>
+                            <p class="text-sm text-darkgreen-light leading-relaxed mb-4">
+                                報價先看用途、尺寸、張數和交期，再加上修改次數與授權範圍；新手可以先訂出自己的「單張基本價」再依需求加減。
+                            </p>
+                        </div>
+                        <a href="article-illustration-pricing.html" class="inline-flex items-center gap-1 text-sm font-bold text-darkgreen hover:text-ochre transition-colors mt-2">
+                            閱讀全文 ➔
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 聯絡方式 & FAQ (Contact) -->
+        <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 fade-in-section">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- 聯絡資訊 -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-3xl font-serif font-bold text-darkgreen mb-3">與我聯絡</h2>
+                        <p class="text-sm text-ochre font-semibold tracking-wider uppercase mb-4">Get In Touch</p>
+                        <p class="text-darkgreen-light leading-relaxed text-sm">
+                            想找插畫師、邀請合作，或只是想聊聊畫？歡迎來信，我通常兩天內回覆。
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 bg-cream-paper p-4 rounded-xl border border-sand/80">
+                            <span class="text-2xl">✉️</span>
+                            <div>
+                                <p class="text-xs text-gray-500">公開 Email</p>
+                                <a href="mailto:yuan.lin.art@example.com" class="text-sm font-bold text-darkgreen hover:text-ochre transition-colors">yuan.lin.art@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-cream-paper p-4 rounded-xl border border-sand/80">
+                            <span class="text-2xl">📷</span>
+                            <div>
+                                <p class="text-xs text-gray-500">Instagram</p>
+                                <a href="https://www.instagram.com/yuanlin.art.demo/" target="_blank" rel="noopener" class="text-sm font-bold text-darkgreen hover:text-ochre transition-colors">@yuanlin.art.demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 常見問題 FAQ -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-sand/80 shadow-sm">
+                    <h3 class="text-xl font-serif font-bold text-darkgreen mb-6 flex items-center gap-2">
+                        <span>💬</span> 常見問題 FAQ
+                    </h3>
+
+                    <div class="space-y-4">
+                        <details class="group bg-cream/50 rounded-xl p-4 border border-sand/50">
+                            <summary class="font-bold text-darkgreen cursor-pointer flex justify-between items-center text-sm">
+                                <span>Q1: 可以接商業插畫案嗎？</span>
+                                <span class="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p class="text-xs text-darkgreen-light mt-3 leading-relaxed border-t border-sand/30 pt-2">
+                                可以！目前接菜單、海報、社群貼文和書籍封面插畫。來信時請告訴我用途、尺寸和希望的交稿時間。
+                            </p>
+                        </details>
+
+                        <details class="group bg-cream/50 rounded-xl p-4 border border-sand/50">
+                            <summary class="font-bold text-darkgreen cursor-pointer flex justify-between items-center text-sm">
+                                <span>Q2: 一個插畫案大概要多久？</span>
+                                <span class="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p class="text-xs text-darkgreen-light mt-3 leading-relaxed border-t border-sand/30 pt-2">
+                                單張插畫通常 1～2 週，包含草圖確認和 1～2 次修改。系列作品會依張數另外排時程。
+                            </p>
+                        </details>
+
+                        <details class="group bg-cream/50 rounded-xl p-4 border border-sand/50">
+                            <summary class="font-bold text-darkgreen cursor-pointer flex justify-between items-center text-sm">
+                                <span>Q3: 可以買你的油畫原作嗎？</span>
+                                <span class="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p class="text-xs text-darkgreen-light mt-3 leading-relaxed border-t border-sand/30 pt-2">
+                                部分畢業創作可以收藏，歡迎來信詢問作品與價格。
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-darkgreen text-cream-paper py-10 border-t border-sand/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="font-serif text-lg font-bold">林予安 Yu-An Lin</p>
+            <p class="text-xs text-sand/80">手繪插畫 ‧ 油畫創作 ‧ 視覺敘事</p>
+            <p class="text-xs text-sand/60">© 2026 林予安 Yu-An Lin. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 回到頂端按鈕 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-ochre text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-ochre-hover z-40" aria-label="回到頂端">
+        ↑
+    </button>
+
+    <!-- 作品詳情 Modal 彈出視窗 -->
+    <div id="portfolio-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 invisible p-4">
+        <div class="bg-cream-paper rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative border border-sand shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-darkgreen hover:text-ochre text-2xl font-bold p-2">✕</button>
+            <div id="modal-content"></div>
+        </div>
     </div>
 
-    <!-- 手機版展開選單 -->
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-navy/95 border-b border-brand-light/40 px-6 py-6 transition-all duration-200 shadow-2xl">
-      <nav class="flex flex-col gap-4 text-base font-medium text-slate-200">
-        <a href="#about" class="mobile-nav-link py-2 border-b border-slate-800 hover:text-brand-accent">關於我</a>
-        <a href="#metrics" class="mobile-nav-link py-2 border-b border-slate-800 hover:text-brand-accent">成果實績</a>
-        <a href="#portfolio" class="mobile-nav-link py-2 border-b border-slate-800 hover:text-brand-accent">作品案例</a>
-        <a href="#experience" class="mobile-nav-link py-2 border-b border-slate-800 hover:text-brand-accent">經歷歷程</a>
-        <a href="#knowledge" class="mobile-nav-link py-2 border-b border-slate-800 hover:text-brand-accent">AI 導入小教室</a>
-        <a href="#contact" class="mobile-nav-link inline-block text-center mt-2 px-5 py-3 rounded-lg bg-brand-accent text-brand-navy font-bold hover:bg-white transition-all">
-          聯絡諮詢
-        </a>
-      </nav>
-    </div>
-  </header>
+    <!-- JavaScript 互動效果 -->
+    <script>
+        // 1. 漢堡選單切換
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconBars = document.getElementById('menu-icon-bars');
+        const iconCross = document.getElementById('menu-icon-cross');
 
-  <main class="overflow-x-hidden pt-20">
-    <!-- 2. 開場區塊 (Hero) -->
-    <section class="relative min-h-[90vh] flex items-center justify-center bg-tech-pattern text-white px-4 sm:px-6 lg:px-8 py-20">
-      <!-- 柔和漸層光暈 -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-navy/60 to-brand-navy pointer-events-none"></div>
-
-      <div class="relative z-10 max-w-4xl mx-auto text-center">
-        <!-- 名字只出現一次 h1 -->
-        <h1 class="text-xs uppercase tracking-widest text-brand-accent font-semibold mb-3">
-          方柏元 ｜ 個人官方網站
-        </h1>
-
-        <!-- 幾何大字頭像徽章展示 -->
-        <div class="mx-auto w-24 h-24 mb-6 rounded-2xl bg-gradient-to-tr from-brand-accent via-cyan-400 to-blue-500 p-0.5 shadow-xl shadow-brand-accent/20">
-          <div class="w-full h-full bg-brand-navy rounded-[14px] flex items-center justify-center">
-            <span class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-brand-accent to-white">方</span>
-          </div>
-        </div>
-
-        <!-- 主標語 -->
-        <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-          在資訊爆炸的時代謙卑學習
-        </p>
-
-        <!-- 代表關鍵字 -->
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
-          <span class="px-4 py-1.5 rounded-full bg-brand-dark/80 border border-brand-accent/40 text-brand-accent text-sm sm:text-base font-mono">
-            # 人工智慧
-          </span>
-          <span class="px-4 py-1.5 rounded-full bg-brand-dark/80 border border-brand-accent/40 text-brand-accent text-sm sm:text-base font-mono">
-            # 問題解決
-          </span>
-          <span class="px-4 py-1.5 rounded-full bg-brand-dark/80 border border-brand-accent/40 text-brand-accent text-sm sm:text-base font-mono">
-            # AI Workflow
-          </span>
-        </div>
-
-        <!-- 開場簡介 (50字內完整使用) -->
-        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-          資訊工程 x 管理科學背景，在宜蘭縣內推動STEM教育，並於大專院校教AI證照課程。
-        </p>
-
-        <!-- CTA 行動按鈕（最希望訪客看作品） -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-accent to-blue-500 text-brand-navy font-bold text-lg hover:shadow-lg hover:shadow-brand-accent/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
-            檢視作品案例 →
-          </a>
-          <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-200 font-semibold text-lg hover:bg-slate-800 hover:text-white transition-all">
-            來信洽詢交流
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. 關於我 (About) -->
-    <section id="about" class="py-24 bg-white border-b border-slate-100 fade-in-section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-brand-blue font-semibold tracking-wider text-sm uppercase">About Me</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-2">關於方柏元</h2>
-          <div class="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- 形象圖示展示區 (左側) -->
-          <div class="lg:col-span-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-tr from-brand-navy to-brand-dark p-8 text-white border border-slate-200">
-              <div class="w-20 h-20 rounded-2xl bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center text-4xl mb-6">
-                💡
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">方柏元</h3>
-              <p class="text-brand-accent text-sm font-medium mb-4">AI 應用講師 ｜ STEM 教育推動者</p>
-              <div class="space-y-2 text-sm text-slate-300 border-t border-slate-700 pt-4">
-                <p><span class="text-slate-400">主要業務：</span>國中小STEM教學、課程設計、專案開發</p>
-                <p><span class="text-slate-400">服務範圍：</span>雙北、桃竹苗、宜蘭</p>
-                <p><span class="text-slate-400">做事原則：</span>專業、謙卑</p>
-                <p><span class="text-slate-400">日常性格：</span>開朗、幽默輕鬆</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 詳細文案內容 (右側) -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="p-6 rounded-2xl bg-brand-surface border border-slate-200">
-              <h3 class="text-lg font-bold text-brand-navy mb-3 flex items-center gap-2">
-                <span class="text-blue-600">🌱</span> 教育初衷與故事轉折
-              </h3>
-              <p class="text-slate-700 leading-relaxed text-base">
-                大學畢業後便投入資訊教育領域，從縣內代理資訊教師到競賽指導與課程規劃，始終希望透過多元教學活動，將資訊素養扎根於學員心中，培養與時俱進的學習能力及解決問題的思維。
-              </p>
-            </div>
-
-            <div class="p-6 rounded-2xl bg-brand-surface border border-slate-200">
-              <h3 class="text-lg font-bold text-brand-navy mb-3 flex items-center gap-2">
-                <span class="text-blue-600">🔍</span> 別人可能不知道的小事實（轉化優勢）
-              </h3>
-              <p class="text-slate-700 leading-relaxed text-base">
-                雖然具備資訊工程背景，卻自認實作能力仍是「腳本小子」等級，但也因此更擅長將專業技術與艱深學理轉化為淺顯易懂、平易近人的知識，讓資訊教育不再遙不可及，而是人人都能理解與應用的能力。
-              </p>
-            </div>
-
-            <!-- 專長技能列表 (4-3) -->
-            <div class="pt-2">
-              <h4 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">核心專長技能</h4>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <span class="block text-brand-navy font-bold text-sm">生成式AI</span>
-                  <span class="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-medium">熟練應用</span>
-                </div>
-                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <span class="block text-brand-navy font-bold text-sm">大數據分析</span>
-                  <span class="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-medium">決策管理</span>
-                </div>
-                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <span class="block text-brand-navy font-bold text-sm">課程教案設計</span>
-                  <span class="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-medium">實務轉化</span>
-                </div>
-                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <span class="block text-brand-navy font-bold text-sm">AI Workflow</span>
-                  <span class="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-medium">流程落地</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. 亮點數字 (Metrics) -->
-    <section id="metrics" class="py-20 bg-brand-navy text-white relative overflow-hidden fade-in-section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Achievements</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">成果亮點實績</h2>
-          <p class="text-slate-400 text-sm mt-2">持續深耕教學現場，以扎實數據展現執行經驗</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <!-- 數字 1 -->
-          <div class="p-8 rounded-2xl bg-brand-dark/70 border border-brand-light/30 backdrop-blur-sm hover:border-brand-accent/50 transition-colors">
-            <div class="text-4xl sm:text-5xl font-black text-brand-accent mb-2 tracking-tight">3<span class="text-2xl font-bold text-white ml-1">年</span></div>
-            <div class="text-lg font-bold text-slate-100 mb-1">在地教育推廣</div>
-            <p class="text-slate-400 text-sm">深耕宜蘭在地國中小與大專科技教育實踐</p>
-          </div>
-
-          <!-- 數字 2 -->
-          <div class="p-8 rounded-2xl bg-brand-dark/70 border border-brand-light/30 backdrop-blur-sm hover:border-brand-accent/50 transition-colors">
-            <div class="text-4xl sm:text-5xl font-black text-brand-accent mb-2 tracking-tight">20+<span class="text-2xl font-bold text-white ml-1">所</span></div>
-            <div class="text-lg font-bold text-slate-100 mb-1">合作學校夥伴</div>
-            <p class="text-slate-400 text-sm">攜手多元校園開展多元科技與競賽實作培訓</p>
-          </div>
-
-          <!-- 數字 3 -->
-          <div class="p-8 rounded-2xl bg-brand-dark/70 border border-brand-light/30 backdrop-blur-sm hover:border-brand-accent/50 transition-colors">
-            <div class="text-4xl sm:text-5xl font-black text-brand-accent mb-2 tracking-tight">5,000+<span class="text-2xl font-bold text-white ml-1">小時</span></div>
-            <div class="text-lg font-bold text-slate-100 mb-1">資訊教學執行經驗</div>
-            <p class="text-slate-400 text-sm">長期累計豐富的第一線課程設計與授課時數</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. 作品集 (Portfolio) -->
-    <section id="portfolio" class="py-24 bg-slate-50 fade-in-section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-brand-blue font-semibold tracking-wider text-sm uppercase">Selected Works</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-2">作品與專案案例</h2>
-          <div class="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-600 mt-4 text-base">涵蓋中小企業 AI 落地課程、科普教育推廣活動與智慧互動研發成果</p>
-        </div>
-
-        <!-- 分類篩選按鈕列 -->
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-          <button class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-brand-navy text-white shadow-sm" data-filter="all">
-            全部作品
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-100" data-filter="課程舉辦">
-            課程舉辦
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-100" data-filter="活動舉辦">
-            活動舉辦
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-100" data-filter="專案研發">
-            專案研發
-          </button>
-        </div>
-
-        <!-- 作品卡片列表 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- 作品 1 -->
-          <article class="portfolio-item rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden" data-category="課程舉辦">
-            <div class="relative h-48 bg-slate-800 overflow-hidden group">
-              <img src="https://www.kamalan-news.com/files/news/17367.jpg"
-                   alt="114年導入AI應用實作計畫"
-                   loading="lazy"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                   onerror="this.onerror=null; this.src='https://picsum.photos/seed/aiedu/800/600';">
-              <span class="absolute top-3 right-3 bg-brand-navy/85 backdrop-blur-sm text-brand-accent text-xs font-bold px-3 py-1 rounded-full">
-                課程舉辦
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-brand-navy mb-2 leading-snug">114年導入AI應用實作計畫</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
-                於宜蘭縣內舉辦針對中小企業導入AI工具實作課程，目標將AI工具落地於一般店家單位。
-              </p>
-              <div class="space-y-1.5 text-xs text-slate-500 mb-6 border-t border-slate-100 pt-3">
-                <p><strong class="text-slate-700">負責項目：</strong>講師、課程籌辦</p>
-                <p><strong class="text-slate-700">使用工具：</strong>Gemini AI、Line Developer</p>
-              </div>
-              <a href="https://www.kamalan-news.com/local/4/17367" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-brand-navy hover:text-white text-slate-800 font-medium text-sm transition-colors">
-                <span>閱讀新聞報導</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- 作品 2 -->
-          <article class="portfolio-item rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden" data-category="活動舉辦">
-            <div class="relative h-48 bg-slate-800 overflow-hidden group">
-              <img src="https://media.zenfs.com/ko/cna.com.tw/fa207621459a9ba4cc80a87f5d9d74e8"
-                   alt="2025科普列車舉辦"
-                   loading="lazy"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                   onerror="this.onerror=null; this.src='https://picsum.photos/seed/sciencetrain/800/600';">
-              <span class="absolute top-3 right-3 bg-brand-navy/85 backdrop-blur-sm text-brand-accent text-xs font-bold px-3 py-1 rounded-full">
-                活動舉辦
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-brand-navy mb-2 leading-snug">2025科普列車舉辦</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
-                透過環台列車活動設置科學體驗攤位，推廣科學教育、培養創意思維與動手實驗能力。
-              </p>
-              <div class="space-y-1.5 text-xs text-slate-500 mb-6 border-t border-slate-100 pt-3">
-                <p><strong class="text-slate-700">負責項目：</strong>活動籌備</p>
-                <p><strong class="text-slate-700">初衷理念：</strong>帶給民眾有趣科學實驗體驗</p>
-              </div>
-              <a href="https://tw.news.yahoo.com/%E7%A7%91%E6%99%AE%E5%88%97%E8%BB%8A-%E8%98%AD%E9%99%BD%E7%A7%91%E5%AD%B8%E8%99%9F-%E5%95%9F%E8%88%AA%E9%A0%AD%E5%9F%8E-091050936.html" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-brand-navy hover:text-white text-slate-800 font-medium text-sm transition-colors">
-                <span>檢視媒體專題</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- 作品 3 -->
-          <article class="portfolio-item rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden" data-category="專案研發">
-            <div class="relative h-48 bg-slate-800 overflow-hidden group">
-              <img src="https://img.youtube.com/vi/nahd44GnJng/hqdefault.jpg"
-                   alt="銀髮族智慧積木學習MR系統"
-                   loading="lazy"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                   onerror="this.onerror=null; this.src='https://picsum.photos/seed/mrtech/800/600';">
-              <span class="absolute top-3 right-3 bg-brand-navy/85 backdrop-blur-sm text-brand-accent text-xs font-bold px-3 py-1 rounded-full">
-                專案研發
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-brand-navy mb-2 leading-snug">銀髮族智慧積木學習MR系統</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
-                積木與MR系統結合，以遊戲的方式引導銀髮族學員訓練手部微肌肉並兼顧趣味互動。
-              </p>
-              <div class="space-y-1.5 text-xs text-slate-500 mb-6 border-t border-slate-100 pt-3">
-                <p><strong class="text-slate-700">負責項目：</strong>專案開發</p>
-                <p><strong class="text-slate-700">使用工具：</strong>Line</p>
-              </div>
-              <a href="https://www.youtube.com/watch?v=nahd44GnJng" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-brand-navy hover:text-white text-slate-800 font-medium text-sm transition-colors">
-                <span>觀看示範影片</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. 經歷歷程 (Experience - 時間軸排版) -->
-    <section id="experience" class="py-24 bg-white border-b border-slate-200 fade-in-section">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-brand-blue font-semibold tracking-wider text-sm uppercase">Journey</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-2">經歷與專業養成</h2>
-          <div class="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        <!-- 時間軸結構 -->
-        <div class="relative border-l-2 border-slate-200 ml-4 sm:ml-8 space-y-10 pl-6 sm:pl-10">
-          <!-- 經歷 1 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-white bg-brand-accent shadow"></div>
-            <div class="inline-block px-3 py-1 rounded bg-slate-100 text-xs font-mono font-semibold text-slate-600 mb-2">
-              2026 / 07
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy">國立陽明交通大學 管理科學系碩士在職專班</h3>
-            <p class="text-slate-600 text-sm mt-1 leading-relaxed">
-              科技思維融合與大數據決策管理，探索管理科學與尖端技術整合實踐。
-            </p>
-          </div>
-
-          <!-- 經歷 2 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-white bg-brand-accent shadow"></div>
-            <div class="inline-block px-3 py-1 rounded bg-slate-100 text-xs font-mono font-semibold text-slate-600 mb-2">
-              2025 / 07
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy">iPAS AI應用規劃師 專業講師</h3>
-            <p class="text-slate-600 text-sm mt-1 leading-relaxed">
-              引領產業AI轉型與實務落地，培訓大專院校與業界學員考取經濟部公信力證照。
-            </p>
-          </div>
-
-          <!-- 經歷 3 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-white bg-brand-accent shadow"></div>
-            <div class="inline-block px-3 py-1 rounded bg-slate-100 text-xs font-mono font-semibold text-slate-600 mb-2">
-              2024 / 09
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy">三星國中 代理資訊老師</h3>
-            <p class="text-slate-600 text-sm mt-1 leading-relaxed">
-              資訊素養與科技教育落地實踐，深耕第一線義務教育現場與多元課程指導。
-            </p>
-          </div>
-
-          <!-- 經歷 4 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full border-4 border-white bg-brand-accent shadow"></div>
-            <div class="inline-block px-3 py-1 rounded bg-slate-100 text-xs font-mono font-semibold text-slate-600 mb-2">
-              2024 / 06
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy">國立宜蘭大學 資訊工程學系</h3>
-            <p class="text-slate-600 text-sm mt-1 leading-relaxed">
-              實務深耕與前沿資訊技術應用，建立嚴謹的工程邏輯與系統設計開發底蘊。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. 專業知識區 (AEO Knowledge Hub - id="knowledge") -->
-    <section id="knowledge" class="py-24 bg-slate-50 fade-in-section">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-brand-blue font-semibold tracking-wider text-sm uppercase">AEO Knowledge Hub</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-2">AI 導入小教室</h2>
-          <div class="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-600 mt-4 text-base">協助中小企業與教育現場導入生成式 AI 工具</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 文章 1 卡片 -->
-          <article class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center font-bold text-lg mb-4">
-              01
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3 leading-snug">
-              中小企業導入 AI，第一步該做什麼？
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
-              第一步不是花大錢買系統，而是盤點高頻重複的行政與客服流程，運用現成工具進行小規模痛點實測。
-            </p>
-            <div class="text-xs text-slate-400 mb-4">更新日期：2026/11/01</div>
-            <a href="article-sme-ai-first-step.html" class="inline-flex items-center gap-2 text-brand-blue font-bold text-sm hover:text-brand-accent transition-colors">
-              閱讀全文 →
-            </a>
-          </article>
-
-          <!-- 文章 2 卡片 -->
-          <article class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center font-bold text-lg mb-4">
-              02
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3 leading-snug">
-              iPAS AI 應用規劃師初級怎麼準備？
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
-              熟讀官方考試標準，著重生成式架構邏輯、Prompt 提詞工程與資安倫理法規，結合理論與應用題型。
-            </p>
-            <div class="text-xs text-slate-400 mb-4">更新日期：2026/11/05</div>
-            <a href="article-ipas-ai-exam-guide.html" class="inline-flex items-center gap-2 text-brand-blue font-bold text-sm hover:text-brand-accent transition-colors">
-              閱讀全文 →
-            </a>
-          </article>
-
-          <!-- 文章 3 卡片 -->
-          <article class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center font-bold text-lg mb-4">
-              03
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3 leading-snug">
-              免費版 Gemini 夠用嗎？
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
-              對日常文書潤飾、多模態圖文分析與中小企業初階工作流而言綽綽有餘，善用提詞即可發揮八成實力。
-            </p>
-            <div class="text-xs text-slate-400 mb-4">更新日期：2026/11/05</div>
-            <a href="article-gemini-free-practical.html" class="inline-flex items-center gap-2 text-brand-blue font-bold text-sm hover:text-brand-accent transition-colors">
-              閱讀全文 →
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. 聯絡區塊 (Contact) -->
-    <section id="contact" class="py-20 bg-brand-navy text-white text-center fade-in-section">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="w-16 h-16 rounded-2xl bg-brand-dark border border-brand-accent/40 flex items-center justify-center text-3xl mx-auto mb-6">
-          ✉️
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">聯繫交流與授課合作</h2>
-        <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto mb-8">
-          無論是中小企業 AI 應用導入諮詢、學校 STEM 培訓，或證照課程合作，歡迎隨時來信。
-        </p>
-
-        <!-- 電子信箱按鈕 -->
-        <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-brand-dark/90 border border-slate-700 p-2 sm:p-3 rounded-2xl max-w-xl mx-auto shadow-2xl">
-          <span class="font-mono text-slate-200 px-4 py-2 select-all text-sm sm:text-base">
-            fang0979580521@gmail.com
-          </span>
-          <a href="mailto:fang0979580521@gmail.com" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-accent text-brand-navy font-bold text-sm hover:bg-white transition-colors">
-            立即寫信
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- 頁尾 (Footer) -->
-  <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-900 text-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <span class="w-6 h-6 rounded bg-brand-accent text-brand-navy font-bold text-xs flex items-center justify-center">方</span>
-        <span class="text-slate-300 font-medium">方柏元</span>
-        <span>| AI應用講師・STEM教育推動者</span>
-      </div>
-      <p class="text-xs text-slate-500">
-        © 2026 方柏元. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <!-- 回到頂端浮動按鈕 (5-3 互動功能) -->
-  <button id="back-to-top" aria-label="回到網頁頂端" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-navy text-brand-accent border border-brand-accent/50 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-accent hover:text-brand-navy hover:scale-110 focus:outline-none">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
-
-  <!-- 互動腳本 (漢堡選單、捲動淡入、作品篩選、回到頂端) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. 手機漢堡選單控制
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const iconOpen = document.getElementById('menu-icon-open');
-      const iconClose = document.getElementById('menu-icon-close');
-      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-      if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
-          const isClosed = mobileMenu.classList.contains('hidden');
-          if (isClosed) {
-            mobileMenu.classList.remove('hidden');
-            iconOpen.classList.add('hidden');
-            iconClose.classList.remove('hidden');
-          } else {
-            mobileMenu.classList.add('hidden');
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-          }
+            mobileMenu.classList.toggle('hidden');
+            iconBars.classList.toggle('hidden');
+            iconCross.classList.toggle('hidden');
         });
 
-        // 點擊手機選單項目自動收合
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-          });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconBars.classList.remove('hidden');
+                iconCross.classList.add('hidden');
+            });
         });
-      }
 
-      // 2. 捲動淡入效果 (Intersection Observer)
-      const fadeSections = document.querySelectorAll('.fade-in-section');
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              obs.unobserve(entry.target);
+        // 2. 閱讀進度條與回到頂端按鈕
+        const progressBar = document.getElementById('progress-bar');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+
+            if (winScroll > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
             }
-          });
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 3. 捲動淡入效果 (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
         }, { threshold: 0.1 });
 
-        fadeSections.forEach(sec => observer.observe(sec));
-      } else {
-        fadeSections.forEach(sec => sec.classList.add('is-visible'));
-      }
-
-      // 3. 作品集分類篩選 (5-3 互動功能)
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filterValue = btn.getAttribute('data-filter');
-
-          // 切換按鈕狀態樣式
-          filterBtns.forEach(b => {
-            b.classList.remove('bg-brand-navy', 'text-white', 'shadow-sm');
-            b.classList.add('bg-white', 'text-slate-700');
-          });
-          btn.classList.remove('bg-white', 'text-slate-700');
-          btn.classList.add('bg-brand-navy', 'text-white', 'shadow-sm');
-
-          // 篩選卡片
-          portfolioItems.forEach(item => {
-            const category = item.getAttribute('data-category');
-            if (filterValue === 'all' || category === filterValue) {
-              item.style.display = 'flex';
-            } else {
-              item.style.display = 'none';
-            }
-          });
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
         });
-      });
 
-      // 4. 回到頂端按鈕監聽 (5-3 互動功能)
-      const backToTopBtn = document.getElementById('back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-          backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
-        } else {
-          backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-          backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        // 4. 作品集分類篩選
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-darkgreen', 'text-white');
+                    b.classList.add('bg-white', 'text-darkgreen');
+                });
+                btn.classList.add('bg-darkgreen', 'text-white');
+                btn.classList.remove('bg-white', 'text-darkgreen');
+
+                const filter = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 5. 作品詳情彈出視窗
+        const modalData = {
+            1: {
+                title: "慢慢走的城市",
+                category: "油畫創作",
+                intro: "用 6 幅油畫，畫下台北街頭「慢下來」的片刻。",
+                why: "台北什麼都很快，但我發現每天通勤時，總有一些人、一些角落是慢的：等公車的阿伯、巷口曬太陽的貓、早餐店的蒸氣。我想把這些被忽略的片刻留下來。",
+                role: "獨立完成：拍照取材、構圖草稿、6 幅 F50 油畫創作，以及展場的作品說明牌。",
+                result: "入選系上畢業展主展區，展期 10 天；有 2 位觀眾留言詢問收藏。",
+                tools: "油畫顏料、亞麻畫布、手機取材照片",
+                image: "work1.jpg",
+                fallbackImg: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80"
+            },
+            2: {
+                title: "阿嬤的雜貨店",
+                category: "繪本插畫",
+                intro: "一本 16 頁的手繪繪本，寫的是我外婆在鄉下開的雜貨店。",
+                why: "外婆的雜貨店在我大三那年收起來了。我想用繪本的方式，把小時候在店裡的記憶留給家裡的小孩。",
+                role: "故事、分鏡、全書插畫與排版都由我獨立完成。",
+                result: "在系上繪本課期末評圖拿到最高分；自費印了 30 本，送給家人和朋友。",
+                tools: "Procreate、Adobe InDesign",
+                image: "work2.jpg",
+                fallbackImg: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+            },
+            3: {
+                title: "小日子咖啡 菜單插畫",
+                category: "商業插畫",
+                intro: "幫一家社區咖啡店畫菜單和 IG 用的飲品插畫。",
+                why: "老闆覺得原本的照片菜單太冷冰冰，想要有手感、讓客人一看就想點的插畫風格。",
+                role: "提出 3 種風格草圖給老闆挑，完成 12 款飲品與甜點插畫，以及菜單版面設計。",
+                result: "兩週內交稿、修改 1 次就定案；老闆說新菜單上線後，甜點的點單變多了。",
+                tools: "Procreate、Adobe Illustrator",
+                image: "work3.jpg",
+                fallbackImg: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+            },
+            4: {
+                title: "2025 系展主視覺",
+                category: "平面設計",
+                intro: "美術系年度系展的主視覺海報、邀請卡與展場指標。",
+                why: "系展需要一個統一的視覺，讓海報、社群貼文和展場看起來是同一套。",
+                role: "擔任美宣組長，負責主視覺發想與設計，並帶組員延伸成 5 種尺寸的周邊。",
+                result: "共印製 200 張海報與 500 張邀請卡；系展 IG 貼文是當年互動最多的一篇。",
+                tools: "Adobe Illustrator、Photoshop、手繪",
+                image: "work4.jpg",
+                fallbackImg: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+            }
+        };
+
+        const modal = document.getElementById('portfolio-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal(id) {
+            const item = modalData[id];
+            if (!item) return;
+
+            modalContent.innerHTML = `
+                <div class="h-64 sm:h-80 rounded-2xl overflow-hidden mb-6">
+                    <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null;this.src='${item.fallbackImg}'" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xs font-bold text-ochre bg-ochre/10 px-3 py-1 rounded-full">${item.category}</span>
+                <h3 class="text-2xl font-serif font-bold text-darkgreen mt-2 mb-3">${item.title}</h3>
+                <p class="text-sm font-medium text-darkgreen-light mb-4">${item.intro}</p>
+                
+                <div class="space-y-3 text-xs sm:text-sm text-gray-700 border-t border-sand/60 pt-4">
+                    <p><strong>💡 創作背景：</strong>${item.why}</p>
+                    <p><strong>✍️ 負責內容：</strong>${item.role}</p>
+                    <p><strong>🎯 成果效益：</strong>${item.result}</p>
+                    <p><strong>🛠️ 使用工具：</strong>${item.tools}</p>
+                </div>
+            `;
+
+            modal.classList.add('active');
         }
-      });
 
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    </script>
 </body>
 </html>
